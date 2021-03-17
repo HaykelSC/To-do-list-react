@@ -1,13 +1,59 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+html{
+    font-size: 20px;
+}
+body{
+    background: #2e87ec;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+h1{
+    font-size: 2.25rem;
+    font-family: 'arial', cursive;
+}
 
-*/
+.wrap{
+    height: 100vh;
+    width: 100vw;
+}
+
+.todo-container{
+    width: 100%;
+    max-width: 500px;
+}
+
+li {
+    line-height: 25px;
+    &.list-group-item{
+        display: flex;
+    }
+    &:hover span.delete{
+        display: inline-block;
+    }
+    span.delete{
+        display: none;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: 20px;
+    }
+}
+
+.footer {
+    &:before{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 50px;
+        overflow: hidden;
+    }
+}
+
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 0;
+}
